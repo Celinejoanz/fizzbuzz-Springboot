@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${numbers}"
+      method="post">
+    Starting number:<input type="number" th:field="*{startingNumber}"/>
+    <span th:if="${#fields.hasErrors('startingNumber')}"
+          th:errors="*{startingNumber}"></span><br/>
+    Ending number:<input type="number" th:field="*{endingNumber}"/>
+    <span th:if="${#fields.hasErrors('endingNumber')}"
+          th:errors="*{endingNumber}"></span><br/>
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

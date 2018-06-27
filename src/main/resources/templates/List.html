@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">Start</a>
+<div th:each="number : ${myList} ">
+    <p th:text="${number}"></p>
+</div>
+</body>
+</html>
